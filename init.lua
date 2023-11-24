@@ -1,21 +1,20 @@
-require "core"
 
-local custom_init_path = vim.api.nvim_get_runtime_file("lua/custom/init.lua", false)[1]
+-- bar of line numbers on the left
+vim.opt.number = true
+vim.opt.relativenumber = true
 
-if custom_init_path then
-  dofile(custom_init_path)
-end
+-- pop up a new window below or on the right
+vim.opt.splitbelow = true
+vim.opt.splitright = true
 
-require("core.utils").load_mappings()
+-- line wraping
+vim.opt.wrap = false
 
-local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
--- bootstrap lazy.nvim!
-if not vim.loop.fs_stat(lazypath) then
-  require("core.bootstrap").gen_chadrc_template()
-  require("core.bootstrap").lazy(lazypath)
-end
+-- use the same clipboard on vim as on the pc
+-- vim.opt.clipboard = "unnamedplus"
+--
 
-dofile(vim.g.base46_cache .. "defaults")
-vim.opt.rtp:prepend(lazypath)
-require "plugins"
+-- have the cursor line always on mid
+vim.opt.scrolloff = 999
+
