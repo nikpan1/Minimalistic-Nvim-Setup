@@ -18,3 +18,11 @@ vim.opt.wrap = false
 -- have the cursor line always on mid
 vim.opt.scrolloff = 999
 
+-- this thing allows to move to the right as far as we want, useful for visual block mode
+vim.opt.virtualedit = "block"
+
+-- when changing something for example using find and replace
+-- it shows an overview on the botton
+vim.opt.inccommand = "split"
+
+
