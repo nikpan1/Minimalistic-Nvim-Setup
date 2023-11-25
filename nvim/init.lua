@@ -1,4 +1,4 @@
-
+  
 -- bar of line numbers on the left
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -29,8 +29,9 @@ vim.opt.inccommand = "split"
 vim.opt.termguicolors = true
 
 -- set the tab intend by 4
-vim.opt.expandtab = false
+vim.opt.expandtab = true 
 vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
 
 require("nikodem.lazy")
 
