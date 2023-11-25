@@ -18,14 +18,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- looks for a directory lazy and runs there init.lua
 require("lazy").setup({
-	-- change theme by :colorscheme
-  "catppuccin/nvim",
-	-- nvim directory tree
-	"nvim-tree/nvim-tree.lua"
-
+    { import = "nikodem.plugins" }
 })
-
-vim.cmd.colorscheme("catppuccin-frappe")
-
-
 
