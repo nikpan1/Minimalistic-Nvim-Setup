@@ -6,7 +6,7 @@ return {
     vim.g.loaded_netrwPlugin = 1
 
 		local nvimtree = require("nvim-tree")
--- configure nvim-tree
+    -- configure nvim-tree
     nvimtree.setup({
       view = {
         width = 35,
