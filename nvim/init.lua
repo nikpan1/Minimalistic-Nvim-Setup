@@ -1,4 +1,4 @@
-  
+
 -- bar of line numbers on the left
 vim.opt.number = true
 vim.opt.relativenumber = true

@@ -18,6 +18,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- looks for a directory lazy and runs there init.lua
 require("lazy").setup({
-    { import = "nikodem.plugins" }
+    { {import = "nikodem.plugins"}, {import = "nikodem.plugins.lsp"} }
 })
 

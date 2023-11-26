@@ -1,11 +1,17 @@
 return {
-    "neovim/nvim-lspconfig",
     "hrsh7th/nvim-cmp",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
+    event = "InsertEnter",
+      dependencies = {
+      "hrsh7th/cmp-buffer", -- source for text in buffer
+      "hrsh7th/cmp-path", -- source for file system paths
+      "L3MON4D3/LuaSnip", -- snippet engine
+      "saadparwaiz1/cmp_luasnip", -- for autocompletion
+      "rafamadriz/friendly-snippets", -- useful snippets
+      "onsails/lspkind.nvim", -- vs-code like pictograms
+      },
 	  config = function() 
       vim.opt.completeopt = "menu,menuone,noselect"
-      local cmp = require("nvim-cmp")
+      local cmp = require("cmp")
       cmp.setup({
         mapping = cmp.mapping.preset.insert({
           ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
